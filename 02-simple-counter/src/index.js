@@ -11,14 +11,17 @@ function view(dispatch, model) {
     div({ className: 'mv2' }, `Count: ${model}`),
     button({ className: 'pv1 ph2 mr2', 
       onclick: () => dispatch(MSGS.ADD) }, '+'),
-    button({ className: 'pv1 ph2',
+    button({ className: 'pv1 ph2 mr2',
       onclick: () => dispatch(MSGS.SUBTRACT) }, '-'),
+    button({className: 'pv1 ph2', 
+      onclick: () => dispatch(MSGS.RESET) }, 'Reset')
   ]);
 }
 
 const MSGS = {
   ADD: 'ADD',
   SUBTRACT: 'SUBTRACT',
+  RESET: 'RESET'
 };
 
 function update(msg, model) {
@@ -27,6 +30,8 @@ function update(msg, model) {
       return model + 1;
     case MSGS.SUBTRACT: 
       return model - 1;
+    case MSGS.RESET:
+      return 0;
     default:
       return model;
   }
