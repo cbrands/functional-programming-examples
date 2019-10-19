@@ -4,9 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "parcel src/index.html --open",
+    "prebuild": "rm -rf dist/*",
+    "build": "parcel build src/index.html --public-url ./"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "hyperscript": "^2.0.2",
+    "hyperscript-helpers": "^3.0.3",
+    "parcel-bundler": "^1.12.4",
+    "virtual-dom": "^2.1.1"
+  }
 }
