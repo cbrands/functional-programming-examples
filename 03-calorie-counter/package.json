@@ -7,7 +7,7 @@
     "dev": "parcel src/index.html --open",
     "prebuild": "rm -rf dist/*",
     "build": "parcel build src/index.html --public-url ./"
-  }, 
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -16,5 +16,8 @@
     "hyperscript-helpers": "^3.0.3",
     "parcel-bundler": "^1.12.4",
     "virtual-dom": "^2.1.1"
+  },
+  "dependencies": {
+    "ramda": "^0.26.1"
   }
 }
